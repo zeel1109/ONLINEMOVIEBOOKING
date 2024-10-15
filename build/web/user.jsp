@@ -36,8 +36,7 @@
             <!--/nav-->
             <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
                 <div class="container">
-                    <h1><a class="navbar-brand" href="index.html"><span class="fa fa-play icon-log"
-                                                                        aria-hidden="true"></span>
+                     <h1><a class="navbar-brand" href="index.html"><img src="assets/images/Logo.jpg" alt="Your logo" title="Your logo" style="height:55px;" />
                             MovieXpress</a></h1>
                     <!-- if logo is image enable this   
                                     <a class="navbar-brand" href="#index.html">
@@ -57,18 +56,18 @@
                                 <b>Welcome, <%= userName%>!</b>  <!-- Display logged-in user's name -->
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link" href="user.jsp">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="movies.html">Movies</a>
+                                <a class="nav-link" href="movies.jsp">Movies</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
+                                <a class="nav-link" href="about.jsp">About</a>
                             </li>
 
 
                             <li class="nav-item">
-                                <a class="nav-link" href="Contact_Us.html">Contact</a>
+                                <a class="nav-link" href="Contact_Us.jsp">Contact</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="Logout">Logout</a>

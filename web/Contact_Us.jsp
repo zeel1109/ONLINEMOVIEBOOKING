@@ -1,3 +1,21 @@
+<%-- 
+    Document   : Contact_Us
+    Created on : 15-Oct-2024, 7:42:06 am
+    Author     : zeelhiteshbhaigondaliya
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="javax.servlet.*"%> <!-- Import HttpSession -->
+<%
+    // Fetch the username from the session
+    HttpSession session1 = request.getSession(false);
+    String userName = (session != null) ? (String) session.getAttribute("name") : null;
+
+    // If userName is null, redirect to the login page (optional)
+    if (userName == null) {
+        response.sendRedirect("sign_in.html");
+   }
+%>
 <!DOCTYPE html>
 <html>
 
@@ -18,7 +36,7 @@
                             MovieXpress</a></h1>
                     <!-- if logo is image enable this   
                                 <a class="navbar-brand" href="#index.html">
-                                    <img src="assets/images/view-3d-cinema-elements.jpg" alt="Your logo" title="Your logo" style="height:35px;" />
+                                    <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
                                 </a> -->
                     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -30,18 +48,25 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
+                            <li class="nav-item active">
+                                <b>Welcome, <%= userName%>!</b>  <!-- Display logged-in user's name -->
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="user.jsp">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="movies.html">Movies</a>
+                                <a class="nav-link" href="movies.jsp">Movies</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
+                                <a class="nav-link" href="about.jsp">About</a>
                             </li>
 
-                            <li class="nav-item active">
-                                <a class="nav-link" href="Contact_Us.html">Contact</a>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="Contact_Us.jsp">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Logout">Logout</a>
                             </li>
                         </ul>
 
